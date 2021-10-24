@@ -1,0 +1,103 @@
+@charset "utf-8";
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: futura-pt, sans-serif;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.sidenav {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, #5c3f64 0, #4a2f5e 25%, #321f59 50%, #0a1254 75%, #000550 100%);-webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow-x: hidden;
+  }
+  .content {
+    
+    margin-left: 200px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+  }
+    .box {
+        position: relative;
+        
+    }
+    .title{
+        text-align: center;
+    }
+    .form-box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 999;
+        width: 100%;
+        max-width: 500px;
+        padding: 40px 60px;
+        border: solid .5px rgb(83, 49, 138);
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px rgba(95, 8, 8, 0.1),
+        -4px -4px 10px rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        font-size: 14px;
+    }
+    .form__input{
+        outline: none;
+        margin: 15px;
+        padding: 10px 50px;
+        border: 1px solid rgb(80, 77, 82);
+        border-radius: 20px;
+        color: rgb(58, 52, 52);
+        background-color: rgba(114, 64, 161, 0.1);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+      }
+      .form__input::placeholder {
+        color: rgb(94, 86, 86);
+        font-size: 12px;
+        text-align: left;
+      }
+      .form__button{
+        width: 100%;
+        border-radius: 25px;
+        display: block;
+        margin: 30px 0;
+        padding: 15px 0;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color:rgb(75, 45, 100);
+        text-decoration: none;
+    }
+    .footer{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        box-shadow: 4px 4px 10px rgba(95, 8, 8, 0.1),
+        -4px -4px 10px rgba(74, 20, 173, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        padding: 15px 10px; 
+        text-align: end;   
+    }
+    .footer__button{
+        border: 2px solid rgb(46, 32, 122);
+        border-radius: 20px;
+        padding: 5px 10px;
+        color: rgb(66, 64, 64);
+        text-decoration: none;
+    }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Crear.css">
+    <title>Crear contacto!</title>
+</head>
+<body ng-controller="CrearController">
+    <div class="sidenav">
+
+    </div>
+    <div class="content">
+        <div class="box">
+            <section class="form-box"class="form">
+                <h1 class="title">Ingrese sus actividades diarias</h1>
+                <label for="name" class="form__label"></label><br>
+                <input type="text" id="name" class="form__input" placeholder="Ingresar Actividad " ng-model="nameInput">
+                <label for="phone" class="form__label"></label>
+                <input type="text" id="phone" class="form__input" placeholder="Ingresar hora de Actividad" ng-model="phoneInput">
+                <label for="email" class="form__label"></label>
+                <input class="form__input" id="email" placeholder="Ingresar Lugar de la actividad" ng-model="emailInput"></input>
+                <a class="form__button" ng-click="crear()">CREAR ACTIVIDAD</a>
+            </section>
+        </div>
+        
+    </div>
+    
+    <footer class="footer">
+        <a href="../ListaContactos/ListaContactos.html" class="footer__button">Regresar</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- crearController -->
+    <script src="./CrearController.js"></script>
+</body>
+</html>

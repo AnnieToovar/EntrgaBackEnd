@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ListaContactos.css">
+    <title>Lista de contactos!</title>
+</head>
+<body ng-controller="ListaContactosController">
+    <header class="header">
+        <h1 class="header__title">Tus contactos!</h1><br>
+        <h4 class="header__text">{{user}}</h4>
+    </header>
+    <section class="cards">
+        <input type="text" class="form__input" placeholder="Buscar..." ng-model="buscarInput">
+        <div class="card" ng-repeat="contacto in contactos | filter:buscarInput">
+            <span class="card__delete" ng-click="eliminar(contacto.correo)">X</span>
+            <p class="card__text"><strong>Actividad que se debe realizar: </strong>{{contacto.nombre}}</p>
+            <p class="card__text"><strong>Hora de actividad: </strong>{{contacto.telefono}}</p>            
+            <p class="card__text"><strong>lugar de la actividad: </strong>{{contacto.correo}}</p>
+        </div>         
+    </section>
+
+    <footer class="footer">
+        <a class="footer__button" ng-click="salir()">Salir</a>
+        <a href="../Crear/Crear.html" class="footer__button">Crear Actividad</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- crearController -->
+    <script src="./ListaContactosController.js"></script>
+    
+</body>
+</html>
